@@ -180,7 +180,7 @@ import torch_geometric
 # COMMAND ----------
 
 # DBTITLE 1,Libs 2 install
-# easydict torch-scatter torch-sparse torch-spline-conv 
+# easydict torch-scatter torch-sparse torch-spline-conv torch_geometric
 
 # Install commands took in total approx. ~45mins to install 
 
