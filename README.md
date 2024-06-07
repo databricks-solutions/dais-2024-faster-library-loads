@@ -21,7 +21,7 @@ This is achieved by:
 
  2. This `{R/Python}_LIB_PATH_MOUNTED` path will be appended to the default library search path for either R `.libPaths()` or Python `sys.path()` as a command within respective `init.sh` scripts. 
 
- 3. The `init.sh` scripts are symbolically linked to the corresponding R or Python `Profile` paths:
+ 3. The `init.sh` scripts makes a symbolical link between user-defined and the corresponding default R or Python `Profile` paths:
     - [.Rprofile](https://docs.posit.co/ide/user/2023.06.1/ide/guide/environments/r/managing-r.html#rprofile) file is automatically sourced (if it exists) when R starts up and allows you to specify the startup script that will be sourced during the R startup process. 
 
     - [.ipython/profile_default/startup](https://ipython.readthedocs.io/en/stable/interactive/tutorial.html#startup-files) directory files will be executed as soon as the IPython shell is constructed, before any other code or scripts specified. The files will be run in lexicographical order of their names (and as such the order of the scripts to be run). 
