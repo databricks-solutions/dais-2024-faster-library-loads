@@ -58,14 +58,40 @@ This is achieved by:
 - gtable 
 - ggplot2
 
+   ```
+   Installation: 
+
+   options(repos = c(POSIT = "https://packagemanager.posit.co/cran/__linux__/jammy/latest", 
+                     CRAN="http://cran.us.r-project.org")
+                     )
+
+   #e.g. 
+   install.packages(packages, 
+                  dependencies=TRUE,
+                  INSTALL_opts = "--no-lock", 
+                  repos=c(POSIT = "https://packagemanager.posit.co/cran/__linux__/jammy/latest"),                 
+                  lib = R_LIB_PATH_MOUNTED,                  
+                  upgrade=TRUE, update.packages = TRUE,
+                  quiet = FALSE, 
+                  verbose = TRUE
+                  ) 
+
+   ```
+
 ##### Python
 `dbr13.3LTS_ML`
 
-- easydict 
-- torch-scatter 
-- torch-sparse 
-- torch-spline-conv 
-- torch_geometric
+- easydict https://pypi.org/project/easydict/
+- torch-scatter https://pypi.org/project/torch-scatter/ | https://github.com/rusty1s/pytorch_scatter | 
+- torch-sparse https://pypi.org/project/torch-sparse/
+- torch-spline-conv https://pypi.org/project/torch-spline-conv/
+- torch_geometric https://pypi.org/project/torch-geometric/ 
+
+   Installation: 
+   ```
+   pip install <library-name>
+   ``` 
+
 
 ------      
 
