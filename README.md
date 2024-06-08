@@ -31,7 +31,7 @@ This is achieved by:
 
     - [.ipython/profile_default/startup](https://ipython.readthedocs.io/en/stable/interactive/tutorial.html#startup-files) directory files will be executed as soon as the IPython shell is constructed, before any other code or scripts specified. The files will be run in lexicographical order of their names (and as such the order of the scripts to be run). 
 
- 4. We include the corresponding Volumes `init.sh` scripts to R/Python specific Clusters Advanced Options. 
+ 4. We add the corresponding Volumes `init.sh` scripts to R/Python specific Clusters Advanced Options. 
 
  5. Whenever the cluster initialization is complete, the project relevant libraries/packages should be available on the corresponding library or system search paths for R or Python. 
 
