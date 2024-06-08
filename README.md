@@ -40,8 +40,8 @@ This is achieved by:
 > [!NOTE] 
 > The following are packages/libraries (in addition to defaults on cluster dbr) used in the demo assets:     
   
-  ##### R 
-  `dbr14.3LTS_ML`
+##### R 
+`dbr14.3LTS_ML`
   
   - data.table
   - car
