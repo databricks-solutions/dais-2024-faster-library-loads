@@ -19,7 +19,7 @@ The overarching message is **Pre-Install Once : Available Every Time** (whenever
 This is achieved by: 
  1. Pre-installing required libraries/packages for a DS/ML project or workflow to a `{R/Python}_LIB_PATH_MOUNTED` path `dbfs/mnt` with `readOnly` access post installation. 
 
- 2. This `{R/Python}_LIB_PATH_MOUNTED` path will be appended to the default library search path for either R `.libPaths()` or Python `sys.path()` as a command within respective `init.sh` scripts. 
+ 2. This `{R/Python}_LIB_PATH_MOUNTED` path will be appended to the default library search path for either R `.libPaths()` or Python `sys.path()` within the R or Python `Profile` files that are associated with the paths referenced in within respective `init.sh` scripts.  
 
  3. The `init.sh` scripts makes a symbolical link between user-defined and the corresponding default R or Python `Profile` paths:
     - [.Rprofile](https://docs.posit.co/ide/user/2023.06.1/ide/guide/environments/r/managing-r.html#rprofile) file is automatically sourced (if it exists) when R starts up and allows you to specify the startup script that will be sourced during the R startup process. 
