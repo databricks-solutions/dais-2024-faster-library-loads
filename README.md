@@ -1,5 +1,10 @@
 # dais-2024-faster-library-loads
 
+> [!CAUTION]
+> **DISCLAIMER:** The software and other materials included in this repo ("Copyrighted Materials") are protected by US and international copyright laws and are the property of Databricks, Inc. The Copyrighted Materials are not provided under a license for public or third-party use. Accordingly, you may not access, use, copy, modify, publish, and/or distribute the Copyrighted Materials.
+> 
+----    
+
 ### Overview: 
 `faster-library-loads` is a productivity hack to cluster library installation wait times. 
 
@@ -10,7 +15,7 @@ This repository contains demo notebooks for the corresponding DAIS2024 lightning
 
 ---      
 
-#### Summary: 
+### Summary: 
 
 The solution proposed is similar for both R and Python libraries/packages. 
 
@@ -31,32 +36,34 @@ This is achieved by:
  5. Whenever the cluster initialization is complete, the project relevant libraries/packages should be available on the corresponding library or system search paths for R or Python. 
 
 ------
-#### The following are packages/libraries (in addition to defaults on cluster dbr) used in the demo assets: 
 
-##### R 
-`dbr14.3LTS_ML`
-
-- data.table
-- car
-- lmtest
-- mclust
-- fitdistrplus
-- mixtools
-- extraDistr
-- actuar
-- forecast
-- stringi
-- assertthat
-- naniar
-- tidyverse
-- XML
-- xml2
-- rcompanion
-- librarian 
-- ggiraph
-- ggiraphExtra
-- gtable 
-- ggplot2
+> [!NOTE] 
+> The following are packages/libraries (in addition to defaults on cluster dbr) used in the demo assets:     
+  
+  ##### R 
+  `dbr14.3LTS_ML`
+  
+  - data.table
+  - car
+  - lmtest
+  - mclust
+  - fitdistrplus
+  - mixtools
+  - extraDistr
+  - actuar
+  - forecast
+  - stringi
+  - assertthat
+  - naniar
+  - tidyverse
+  - XML
+  - xml2
+  - rcompanion
+  - librarian 
+  - ggiraph
+  - ggiraphExtra
+  - gtable 
+  - ggplot2
 
    ```
    Installation: 
