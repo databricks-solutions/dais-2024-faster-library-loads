@@ -94,10 +94,12 @@ This is achieved by:
 - torch-spline-conv https://pypi.org/project/torch-spline-conv/
 - torch_geometric https://pypi.org/project/torch-geometric/ 
 
-   Installation: 
-   ```
-   pip install <library-name>
-   ``` 
+
+```
+Installation:
+
+pip install <library-name>
+``` 
 
 
 ------      
