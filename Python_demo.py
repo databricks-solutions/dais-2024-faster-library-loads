@@ -2,9 +2,9 @@
 # MAGIC %md 
 # MAGIC ### DEMO: Cluster + PreInstalled PyTorch Libs 
 # MAGIC
-# MAGIC (init script : to establish symbolic link between 
+# MAGIC <!-- (init script : to establish symbolic link between 
 # MAGIC  `{mounted_path_to}/.ipython/profile_pyenv/startup` & `/root/.ipython/profile_default/startup` directories such that the associated `ipython-profile-startup.py` script(s) within will append `PYTHON_LIB_PATH_MOUNTED` with pre-installed python libraries to `sys.path()` 
-# MAGIC  )
+# MAGIC  ) -->
 # MAGIC
 # MAGIC <!-- 
 # MAGIC Cluster: `mmt_13.3LTSML_gpu_(fasterlibloads_py)`
@@ -12,10 +12,6 @@
 # MAGIC Volumes init: `/Volumes/mmt_external/dais24/ext_vols/init_scripts/ipython_profile_symlink2mnt_init.sh` 
 # MAGIC -->
 # MAGIC
-
-# COMMAND ----------
-
-# print(dbutils.fs.head("/mnt/dais24_demo/faster_lib_loads/13.3LTS_ML/clusterEnv/.ipython/profile_pyenv/startup/00_pyenv.py"))
 
 # COMMAND ----------
 
@@ -53,7 +49,8 @@ from torch.distributions import normal, kl
 
 # COMMAND ----------
 
-
+# MAGIC %md
+# MAGIC ---     
 
 # COMMAND ----------
 
@@ -70,7 +67,8 @@ nx.draw(g)
 
 # COMMAND ----------
 
-
+# MAGIC %md
+# MAGIC ---      
 
 # COMMAND ----------
 
@@ -146,9 +144,6 @@ print(f'Is undirected: {data.is_undirected()}')
 # COMMAND ----------
 
 # DBTITLE 1,Simple Multi-layer Perception Network (MLP) -- (shared weights across all nodes)
-# import torch
-# from torch.nn import Linear
-# import torch.nn.functional as F
 
 class MLP(torch.nn.Module):
     def __init__(self, hidden_channels):
@@ -227,7 +222,7 @@ print(model)
 
 # COMMAND ----------
 
-# DBTITLE 1,Visualize the N-dim node embeddings of untrained GCN network in 2D 
+# DBTITLE 1,Visualize the N-dim node embeddings of untrained GCN network in 2D
 model = GCN(hidden_channels=16)
 model.eval()
 
@@ -281,14 +276,15 @@ visualize(out, color=data.y)
 
 # COMMAND ----------
 
+# MAGIC %md
+# MAGIC ---     
+
+# COMMAND ----------
+
 
 
 # COMMAND ----------
 
-# DBTITLE 1,Additional example of graph network use case
+# DBTITLE 0,Additional example of graph network use case
 from networkx_examples.plot_betweenness_centrality import *
 btwcentrality_wormnet()
-
-# COMMAND ----------
-
-

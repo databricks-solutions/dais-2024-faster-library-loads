@@ -2,7 +2,7 @@
 # MAGIC %md 
 # MAGIC ### DEMO: Cluster + PreInstalled R Packages 
 # MAGIC
-# MAGIC (init script: append `R_LIB_PATH_MOUNTED` with pre-installed packages to `.libPaths()` as `/root/.Rprofile`) 
+# MAGIC <!-- (init script: append `R_LIB_PATH_MOUNTED` with pre-installed packages to `.libPaths()` as `/root/.Rprofile`)  -->
 # MAGIC
 # MAGIC <!-- 
 # MAGIC Cluster: `mmt_14.3LTSML_cpu_(fasterlibloads_r)`
@@ -27,10 +27,8 @@ library(rcompanion)
 
 # COMMAND ----------
 
-# DBTITLE 1,compareLM: Compare fit statistics for lm models
+# DBTITLE 1,compareLM: Compare fit statistics for linear models
 rcompanion::compareLM 
-
-# https://www.rdocumentation.org/packages/rcompanion/versions/2.4.30/topics/compareLM
 
 # COMMAND ----------
 
@@ -89,12 +87,16 @@ system.file(package = "ggiraphExtra") ## requires ggplot2 version: 3.5.0
 
 # DBTITLE 1,Load library with specific lib.loc = pre-installed lib-path
 library("ggiraphExtra", lib.loc=.libPaths()[7])
-ggiraphExtra::ggBoxplot
+ggiraphExtra::ggPoints
 
 # COMMAND ----------
 
 # DBTITLE 1,Q: loaded ggplot2 package location?
 system.file(package="ggplot2") ## loaded dependecies are found on pre-installed path
+
+# COMMAND ----------
+
+mtcars
 
 # COMMAND ----------
 
@@ -105,6 +107,10 @@ library(ggiraph, lib.loc = .libPaths()[7])
 library(plyr) 
 
 ggPoints(aes(x=wt,y=mpg,color=am),data=mtcars,method="lm")
+
+# COMMAND ----------
+
+iris
 
 # COMMAND ----------
 
@@ -132,7 +138,7 @@ packINFO <- data.frame(Package = installed_packages[, "Package"],
                        Version = installed_packages[, "Version"],
                        loc = installed_packages[, "LibPath"])
 
-print(packINFO)
+knitr::kable(packINFO, format = "markdown")
 
 # COMMAND ----------
 
