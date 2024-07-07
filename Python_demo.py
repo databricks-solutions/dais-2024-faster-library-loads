@@ -80,10 +80,6 @@ nx.draw(g)
 
 # COMMAND ----------
 
-
-
-# COMMAND ----------
-
 # DBTITLE 1,Helper function 
 # Helper function for visualization.
 %matplotlib inline
@@ -278,10 +274,6 @@ visualize(out, color=data.y)
 
 # MAGIC %md
 # MAGIC ---     
-
-# COMMAND ----------
-
-
 
 # COMMAND ----------
 

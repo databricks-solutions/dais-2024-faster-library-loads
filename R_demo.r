@@ -87,7 +87,7 @@ system.file(package = "ggiraphExtra") ## requires ggplot2 version: 3.5.0
 
 # DBTITLE 1,Load library with specific lib.loc = pre-installed lib-path
 library("ggiraphExtra", lib.loc=.libPaths()[7])
-ggiraphExtra::ggPoints
+# ggiraphExtra::ggPoints
 
 # COMMAND ----------
 

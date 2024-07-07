@@ -199,7 +199,6 @@ install.packages(packages,
 # COMMAND ----------
 
 # DBTITLE 1,Quick check on files installed to path
-# %fs ls "dbfs:/mnt/hls_demo/14.3LTS_ML/libs/r/"
 R_LIB_PATH_MOUNTED <- '/dbfs/mnt/dais24_demo/faster_lib_loads/14.3LTS_ML/libs/r/'
 
 # COMMAND ----------
@@ -214,7 +213,6 @@ R_LIB_PATH_MOUNTED <- '/dbfs/mnt/dais24_demo/faster_lib_loads/14.3LTS_ML/libs/r/
 # COMMAND ----------
 
 # DBTITLE 1,Append  R_LIB_PATH_MOUNTED to .libPaths()
-# Rlib_path <- "/dbfs/mnt/hls_demo/14.3LTS_ML/libs/r/"
 R_LIB_PATH_MOUNTED <- '/dbfs/mnt/dais24_demo/faster_lib_loads/14.3LTS_ML/libs/r/'
 # Add the library to the search path at the start
 .libPaths(c(.libPaths(), R_LIB_PATH_MOUNTED))
