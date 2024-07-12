@@ -37,6 +37,12 @@ This is achieved by:
 
 ------
 
+> [!IMPORTANT]
+> The solution documented in this repo has been predominantly tested on Azure Databricks using Compute for Single Node | Single User Access mode.
+> Please be aware that code modifications are likely neccesary for Databricks on AWS / GCP cloud and/or where other Compute Access modes are used. 
+
+------     
+
 > [!NOTE] 
 > The following are packages/libraries (in addition to defaults on cluster dbr) used in the demo assets:     
   
