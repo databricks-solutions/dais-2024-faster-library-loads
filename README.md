@@ -1,10 +1,5 @@
 # dais-2024-faster-library-loads
 
-> [!CAUTION]
-> **DISCLAIMER:** The software and other materials included in this repo ("Copyrighted Materials") are protected by US and international copyright laws and are the property of Databricks, Inc. The Copyrighted Materials are not provided under a license for public or third-party use. Accordingly, you may not access, use, copy, modify, publish, and/or distribute the Copyrighted Materials.
-> 
-----    
-
 ### Overview: 
 `faster-library-loads` is a productivity hack to cluster library installation wait times. 
 
