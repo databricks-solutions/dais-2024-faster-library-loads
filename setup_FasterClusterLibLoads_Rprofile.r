@@ -64,14 +64,14 @@
 # DBTITLE 1,Blob Storage to associate PATH_MOUNTED 
 # MAGIC %python
 # MAGIC from IPython.display import Image
-# MAGIC Image(filename="/Workspace/Users/may.merkletan@databricks.com/Faster_Lib_Loads/markdown_images/access_storage_container.png", width=1600)
+# MAGIC Image(filename="/Workspace/Users/{username@email.com}/Faster_Lib_Loads/markdown_images/access_storage_container.png", width=1600)
 
 # COMMAND ----------
 
 # DBTITLE 1,Create Shared Access Tokens
 # MAGIC %python
 # MAGIC from IPython.display import Image
-# MAGIC Image(filename="/Workspace/Users/may.merkletan@databricks.com/Faster_Lib_Loads/markdown_images/generateSAStoken.png", width=1600)
+# MAGIC Image(filename="/Workspace/Users/{username@email.com}/Faster_Lib_Loads/markdown_images/generateSAStoken.png", width=1600)
 
 # COMMAND ----------
 
