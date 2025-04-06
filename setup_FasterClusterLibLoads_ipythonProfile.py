@@ -46,13 +46,13 @@ print('IPYTHON_PROFILE_PATH :', IPYTHON_PROFILE_PATH)
 
 # DBTITLE 1,Blob Storage to associate PATH_MOUNTED  as dbfs/mnt path to install specific library  packages
 from IPython.display import Image
-Image(filename="/Workspace/Users/may.merkletan@databricks.com/Faster_Lib_Loads/markdown_images/access_storage_container.png", width=1600)
+Image(filename="/Workspace/Users/{username@email.com}/Faster_Lib_Loads/markdown_images/access_storage_container.png", width=1600)
 
 # COMMAND ----------
 
 # DBTITLE 1,Create Shared Access Tokens
 from IPython.display import Image
-Image(filename="/Workspace/Users/may.merkletan@databricks.com/Faster_Lib_Loads/markdown_images/generateSAStoken.png", width=1600)
+Image(filename="/Workspace/Users/{username@email.com}/Faster_Lib_Loads/markdown_images/generateSAStoken.png", width=1600)
 
 # COMMAND ----------
 
@@ -310,17 +310,17 @@ display(dbutils.fs.ls(f"{PYTHON_LIB_PATH_MOUNTED}"))
 # COMMAND ----------
 
 # DBTITLE 1,Create a workspace .ipython/profile_pyenv/startup/00_pyenv.py with the following code:
-# MAGIC %sh head /Workspace/Users/may.merkletan@databricks.com/Faster_Lib_Loads/.ipython/profile_pyenv/startup/00_pyenv.py
+# MAGIC %sh head /Workspace/Users/{username@email.com}/Faster_Lib_Loads/.ipython/profile_pyenv/startup/00_pyenv.py
 
 # COMMAND ----------
 
 # DBTITLE 1,Structure of the .ipython/profile_pyenv/startup/ folder also includes a README 
-# MAGIC %sh ls -lah /Workspace/Users/may.merkletan@databricks.com/Faster_Lib_Loads/.ipython/profile_pyenv/startup/
+# MAGIC %sh ls -lah /Workspace/Users/{username@email.com}/Faster_Lib_Loads/.ipython/profile_pyenv/startup/
 
 # COMMAND ----------
 
 # DBTITLE 1,.ipython/profile_pyenv/startup/README details:
-# MAGIC %sh head /Workspace/Users/may.merkletan@databricks.com/Faster_Lib_Loads/.ipython/profile_pyenv/startup/README
+# MAGIC %sh head /Workspace/Users/{username@email.com}/Faster_Lib_Loads/.ipython/profile_pyenv/startup/README
 
 # COMMAND ----------
 
@@ -330,7 +330,7 @@ display(dbutils.fs.ls(f"{PYTHON_LIB_PATH_MOUNTED}"))
 # COMMAND ----------
 
 # DBTITLE 1,copy workspace .ipython/profile_pyenv folder to mounted IPYTHON_PROFILE_PATH
-# MAGIC %sh cp -r /Workspace/Users/may.merkletan@databricks.com/Faster_Lib_Loads/.ipython/profile_pyenv /dbfs/mnt/dais24_demo/faster_lib_loads/13.3LTS_ML/clusterEnv/.ipython/
+# MAGIC %sh cp -r /Workspace/Users/{username@email.com}/Faster_Lib_Loads/.ipython/profile_pyenv /dbfs/mnt/dais24_demo/faster_lib_loads/13.3LTS_ML/clusterEnv/.ipython/
 
 # COMMAND ----------
 
@@ -345,12 +345,12 @@ display(dbutils.fs.ls(f"{PYTHON_LIB_PATH_MOUNTED}"))
 # COMMAND ----------
 
 # DBTITLE 1,[3A.1] init script : create symbolic link for mounted IPYTHON_PROFILE_PATH/startup to /root/ipython/profile_default/startup path
-!head /Workspace/Users/may.merkletan@databricks.com/Faster_Lib_Loads/.ipython/ipython_profile_symlink2mnt_init.sh
+!head /Workspace/Users/{username@email.com}/Faster_Lib_Loads/.ipython/ipython_profile_symlink2mnt_init.sh
 
 # COMMAND ----------
 
 # DBTITLE 1,[3A.2] copy workspace .init file to UC Volumes path to init_scripts
-!cp -r /Workspace/Users/may.merkletan@databricks.com/Faster_Lib_Loads/.ipython/ipython_profile_symlink2mnt_init.sh /Volumes/mmt_external/dais24/ext_vols/init_scripts/
+!cp -r /Workspace/Users/{username@email.com}/Faster_Lib_Loads/.ipython/ipython_profile_symlink2mnt_init.sh /Volumes/mmt_external/dais24/ext_vols/init_scripts/
 
 # COMMAND ----------
 
@@ -361,7 +361,7 @@ print(dbutils.fs.head("/Volumes/mmt_external/dais24/ext_vols/init_scripts/ipytho
 
 # DBTITLE 1,[3A.4] Add Volumes  init script to Cluster
 from IPython.display import Image
-Image(filename="/Workspace/Users/may.merkletan@databricks.com/Faster_Lib_Loads/markdown_images/cluster_ipython_profile_symlink_initVol.png", width=1600)
+Image(filename="/Workspace/Users/{username@email.com}/Faster_Lib_Loads/markdown_images/cluster_ipython_profile_symlink_initVol.png", width=1600)
 
 # COMMAND ----------
 
@@ -371,13 +371,13 @@ Image(filename="/Workspace/Users/may.merkletan@databricks.com/Faster_Lib_Loads/m
 # COMMAND ----------
 
 # DBTITLE 1,[3B.1] create an .init script to create symbolic link for Cluster Env. Var IPYTHON_PROFILE_DIR to /root/ipython/profile/startup
-!cat /Workspace/Users/may.merkletan@databricks.com/Faster_Lib_Loads/.ipython/ipython_profile_clusterEnvVar_init.sh
+!cat /Workspace/Users/{username@email.com}/Faster_Lib_Loads/.ipython/ipython_profile_clusterEnvVar_init.sh
 
 # COMMAND ----------
 
 # DBTITLE 1,[3B.2] copy workspace .init file to UC Volumes path to init_scripts
 ## copy .init script to mounted external UC Volumes path 
-!cp -r /Workspace/Users/may.merkletan@databricks.com/Faster_Lib_Loads/.ipython/ipython_profile_clusterEnvVar_init.sh /Volumes/mmt_external/dais24/ext_vols/init_scripts/
+!cp -r /Workspace/Users/{username@email.com}/Faster_Lib_Loads/.ipython/ipython_profile_clusterEnvVar_init.sh /Volumes/mmt_external/dais24/ext_vols/init_scripts/
 
 # COMMAND ----------
 
@@ -389,12 +389,12 @@ print(dbutils.fs.head("/Volumes/mmt_external/dais24/ext_vols/init_scripts/ipytho
 
 # DBTITLE 1,[3B.4] ADD Add Volumes  init script + Adv. Env. Var to Cluster
 from IPython.display import Image
-Image(filename="/Workspace/Users/may.merkletan@databricks.com/Faster_Lib_Loads/markdown_images/cluster_ipython_profile_EnvVar_initVol.png", width=1600)
+Image(filename="/Workspace/Users/{username@email.com}/Faster_Lib_Loads/markdown_images/cluster_ipython_profile_EnvVar_initVol.png", width=1600)
 
 # COMMAND ----------
 
 from IPython.display import Image
-Image(filename="/Workspace/Users/may.merkletan@databricks.com/Faster_Lib_Loads/markdown_images/cluster_ipython_profile_user_EnvVar.png", width=1600)
+Image(filename="/Workspace/Users/{username@email.com}/Faster_Lib_Loads/markdown_images/cluster_ipython_profile_user_EnvVar.png", width=1600)
 
 # COMMAND ----------
 
