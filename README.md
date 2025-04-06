@@ -4,7 +4,8 @@
 `faster-library-loads` is a productivity hack to cluster library installation wait times. 
 
 This repository contains demo notebooks for the corresponding DAIS2024 lightning talk:   
- > [GOODBYE TO CLUSTER WAIT TIME: HELLO LIGHTNING-FAST R/PY LIBRARY LOADS!](https://www.databricks.com/dataaisummit/session/goodbye-cluster-wait-time-hello-lightning-fast-rpy-library-loads)
+ > [GOODBYE TO CLUSTER WAIT TIME: HELLO LIGHTNING-FAST R/PY LIBRARY LOADS!](https://youtu.be/ajGahfVgkD0?feature=shared)!
+ <!--- (https://www.databricks.com/dataaisummit/session/goodbye-cluster-wait-time-hello-lightning-fast-rpy-library-loads) --->
 
  > ABSTRACT: *Ever wished you could start up an interactive cluster without having to wait for libraries to be pulled down from repositories and installed before you could begin your work? You're not alone! Many people find themselves in this same situation, and to ‘save’ time they multitask while waiting, only to have the cluster terminate after a certain amount of time of inactivity, forcing them to start over. Imagine being able to skip this waiting game and have all the required libraries available right from the start. This can be a reality for R packages as well as Python libraries. The approach can also be applied to other DSML developments and workflows. There is a productivity hack that can have you load up libraries in under 60 seconds whenever your cluster spins up!*
 
