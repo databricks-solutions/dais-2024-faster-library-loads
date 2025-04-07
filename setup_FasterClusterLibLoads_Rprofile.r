@@ -408,7 +408,7 @@ ggplot2::geom_boxplot
 # COMMAND ----------
 
 # DBTITLE 1,Check Read-only permissions on mount |  mkdirs: should fail if read-only Access Token is used
-# MAGIC %fs mkdir r/.Rprofile "dbfs:/mnt/dais24_demo/faster_lib_loads/14.3LTS_ML/libs/test"
+# MAGIC %fs mkdirs "dbfs:/mnt/dais24_demo/faster_lib_loads/14.3LTS_ML/libs/test"
 
 # COMMAND ----------
 
