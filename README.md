@@ -18,18 +18,20 @@ The solution proposed is similar for both R and Python libraries/packages.
 The overarching message is **Pre-Install Once : Available Every Time** (whenever the cluster compute spins up)   
 
 This is achieved by: 
- 1. Pre-installing required libraries/packages for a DS/ML project or workflow to a `{R/Python}_LIB_PATH_MOUNTED` path `dbfs/mnt` with `readOnly` access post installation. 
+ 1. Testing installation of required packages/libraries in a suitable [Databricks Runtime](https://docs.databricks.com/aws/en/release-notes/runtime/) that will support the required dependencies. 
+ 
+ 2. Pre-installing required libraries/packages for a DS/ML project or workflow to a `{R/Python}_LIB_PATH_MOUNTED` path `dbfs/mnt` with `readOnly` access post installation. 
 
- 2. This `{R/Python}_LIB_PATH_MOUNTED` path will be appended to the default library search path for either R `.libPaths()` or Python `sys.path()` within the R or Python `Profile` files that are associated with the paths referenced within respective `init.sh` scripts.  
+ 3. This `{R/Python}_LIB_PATH_MOUNTED` path will be appended to the default library search path for either R `.libPaths()` or Python `sys.path()` within the R or Python `Profile` files that are associated with the paths referenced within respective `init.sh` scripts.  
 
- 3. The `init.sh` scripts makes a symbolical link between user-defined and the corresponding default R or Python `Profile` paths:
+ 4. The `init.sh` scripts makes a symbolical link between user-defined and the corresponding default R or Python `Profile` paths:
     - [.Rprofile](https://docs.posit.co/ide/user/2023.06.1/ide/guide/environments/r/managing-r.html#rprofile) file is automatically sourced (if it exists) when R starts up and allows you to specify the startup script that will be sourced during the R startup process. 
 
     - [.ipython/profile_default/startup](https://ipython.readthedocs.io/en/stable/interactive/tutorial.html#startup-files) directory files will be executed as soon as the IPython shell is constructed, before any other code or scripts specified. The files will be run in lexicographical order of their names (and as such the order of the scripts to be run). 
 
- 4. We add the corresponding Volumes `init.sh` scripts to R/Python specific Clusters Advanced Options. 
+ 5. We add the corresponding Volumes `init.sh` scripts to R/Python specific Clusters Advanced Options. 
 
- 5. Whenever the cluster initialization is complete, the project relevant libraries/packages should be available on the corresponding library or system search paths for R or Python. 
+ 6. Whenever the cluster initialization is complete, the project relevant libraries/packages should be available on the corresponding library or system search paths for R or Python. 
 
 ------
 
